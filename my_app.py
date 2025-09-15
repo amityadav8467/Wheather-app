@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 
-app = Flask(my_app)
+app = Flask(__name__)
 
 API_KEY = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=23c701aaf17f39a95ac4530a4acd5ac9"  # replace with your OpenWeatherMap API key
 
@@ -29,3 +29,4 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
